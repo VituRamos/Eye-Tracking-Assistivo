@@ -1,0 +1,7 @@
+opencv-python>=4.9.0
+numpy>=1.26.0
+mediapipe>=0.10.35
+PyYAML>=6.0
+
+# Testes
+pytest>=8.0.0

@@ -1,9 +1,14 @@
+# =====================================================================
+# Configuração central do Eye-Tracking Assistivo
+# Ajuste estes valores sem precisar tocar em código Python.
+# =====================================================================
+
 deteccao:
   frames_para_selecionar: 15 # frames olhando fixo p/ confirmar seleção (~0.7s a 20fps)
   num_frames_calibracao: 90 # frames coletados por fase de calibração
   diferenca_minima_calibracao: 0.03 # abaixo disso, avisa que a calibração ficou fraca
   alpha_ema: 0.35 # suavização exponencial do ratio (0=muito suave/lento, 1=sem suavização)
-  tamanho_historico_grafico: 300
+  tamanho_historico_grafico: 200
   limite_frames_sem_rosto: 60 # ~2s a 30fps antes de avisar "reposicione o rosto"
 
   # Confirmação por piscada (alternativa ao dwell time / olhar fixo)
