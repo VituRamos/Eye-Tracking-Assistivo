@@ -1,0 +1,35 @@
+deteccao:
+  frames_para_selecionar: 15 # frames olhando fixo p/ confirmar seleção (~0.7s a 20fps)
+  num_frames_calibracao: 90 # frames coletados por fase de calibração
+  diferenca_minima_calibracao: 0.03 # abaixo disso, avisa que a calibração ficou fraca
+  alpha_ema: 0.35 # suavização exponencial do ratio (0=muito suave/lento, 1=sem suavização)
+  tamanho_historico_grafico: 300
+  limite_frames_sem_rosto: 60 # ~2s a 30fps antes de avisar "reposicione o rosto"
+
+  # Confirmação por piscada (alternativa ao dwell time / olhar fixo)
+  piscada:
+    habilitada: true
+    limiar_ear: 0.15 # abaixo disso, considera olho fechado
+    frames_minimos_piscada: 8 # ~0.3-0.5s de olho fechado para contar como confirmação
+
+camera:
+  indice: 0
+  largura: 1280
+  altura: 720
+
+modelo:
+  caminho: "face_landmarker.task"
+  url: "https://storage.googleapis.com/mediapipe-models/face_landmarker/face_landmarker/float16/1/face_landmarker.task"
+  sha256_esperado: "" # opcional: preencha para validar integridade do download
+
+perfis:
+  pasta: "perfis"
+  validade_dias: 7 # depois disso, sugere recalibrar em vez de reusar automaticamente
+
+logs:
+  pasta: "logs"
+  nivel: "INFO"
+
+janela:
+  titulo: "Eye-Tracking Assistivo V2.0 (MediaPipe)"
+  fullscreen: true
