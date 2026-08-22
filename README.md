@@ -99,11 +99,3 @@ ambiente, inclusive CI.
 - Cálculo de `ratio_y` (eixo vertical) disponível em `gaze_engine.py`,
   abrindo caminho para uma grade 2D / teclado por varredura no futuro
 - Timeout de rosto não detectado, com aviso visual na tela
-
-## Próximos passos sugeridos
-
-- Threading já isola a câmera; o próximo ganho de robustez é mover o
-  próprio `detect_for_video` para uma thread/worker separado se a
-  detecção ficar pesada em hardware mais fraco
-- Front-end: ver conversa anterior sobre opções (Qt/PySide6 para uso
-  desktop assistivo, ou FastAPI + WebSocket para um front-end web)
